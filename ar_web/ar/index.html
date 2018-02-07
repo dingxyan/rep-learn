@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<script type="text/javascript">
+            var $$C = {
+                user_id : '用户id',
+                obj : [ // obj数组存放，所有3d模型，数组顺序决定出场顺序
+                    {
+                        type : '1' ,  //1 表示怪物  2表示法宝
+                        id :  '1',   // 表示物体的标识，每个id对应一个3d建模
+                        isSup :  true  //是否是超级怪物，true表示是 false 表示不是
+                    },
+                    {
+                        type : '1' ,  //1 表示怪物  2表示法宝
+                        id :  '2',   // 表示物体的标识，每个id对应一个3d建模
+                        isSup :  true  //是否是超级怪物，true表示是 false 表示不是
+                    },
+                    {
+                        type : '1' ,  //1 表示怪物  2表示法宝
+                        id :  '3',   // 表示物体的标识，每个id对应一个3d建模
+                        isSup :  true  //是否是超级怪物，true表示是 false 表示不是
+                    }
+                ]
+            }
+        </script>
+	</head>
+
+	<body>
+		<div class="loading">正在加载中...<span id="loaded"></span>%</div>
+		<div class="video" id="videoWrap"></div>
+		<div class="container" id="container"></div>
+		
+		<div class="msg" id="msg"><div id="mycamera"></div></div>
+		<div id="target" class="target" style="display: none;">目标出现</div>
+		<div id="meshShowBox" class="mesh-box clearfix">
+			<div class="mesh-show mesh-show1 cur"></div>
+			<div class="mesh-show mesh-show2"></div>
+			<div class="mesh-show mesh-show3"></div>
+		</div>
+		<div id="attack" class="attack disable">点我攻击</div>
+
+		<script type="text/javascript" src="js/lib/three.js"></script>
+		<script type="text/javascript" src="js/lib/Detector.js"></script>
+		<script type="text/javascript" src="js/lib/stats.min.js"></script>
+		<script type="text/javascript" src="js/lib/Tween.min.js"></script>
+		<script type="text/javascript" src="js/lib/DeviceOrientationControls.js"></script>
+		<script type="text/javascript" src="js/lib/zepto.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
