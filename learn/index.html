@@ -2,9 +2,57 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+	/*.box{
+		background-color: pink;
+		width: 500px;
+		height: 500px;
+		position: relative;
+	}
+	.main{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	}
+	.box2{
+		height: 200px;
+		background-color: red;
+	}*/
+
+	</style>
 </head>
 <body>
-<video></video>
-<script type="text/javascript" src="js/a.js"></script>
+<div class="box2" style="display: none;z-index: 11">
+</div>
+<div class="box">
+	<canvas id="canvas" width="300" height="300"></canvas>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	function main() {  
+        //首先获取到canvas的dom对象  
+        var canvas = document.getElementById("canvas");  
+  
+        //获取到WebGL的上下文  
+        var gl = canvas.getContext("webgl");  
+  
+        //不支持WebGL的浏览器将打印一个错误，并结束代码运行  
+        if(!gl){  
+            console.log("浏览器不支持WebGL");  
+            return;  
+        }  
+  
+        //指定一个覆盖（清空）canvas的颜色  
+        gl.clearColor(0.8,1,1,1.0);  
+  
+        //执行清空  
+        gl.clear(gl.COLOR_BUFFER_BIT);
+    }
+    $(function(){
+    	main();
+    })
+</script>
+<!-- <script type="text/javascript" src="js/a.js"></script> -->
 </body>
 </html>
